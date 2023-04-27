@@ -1,0 +1,20 @@
+%include STRUCT.fdf
+SystemLabel siesta_2
+PAO.BasisSize DZP
+MeshCutoff 250. Ry
+SaveHS true
+SaveRho true
+SaveTotalPotential true
+Spin polarized
+%block kgrid.MonkhorstPack
+  10  1 1 0.
+   1 1 1 0.
+   0  0 1 0.
+%endblock
+%block DM.InitSpin
+    1 -
+    4 +
+%endblock DM.InitSpin
+%block ExternalElectricField
+    0.000 0.500 0.000 V/Ang
+%endblock ExternalElectricField
